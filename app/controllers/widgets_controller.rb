@@ -4,6 +4,7 @@ class WidgetsController < ApplicationController
   # GET /widgets or /widgets.json
   def index
     @widgets = Widget.all
+    @widget = Widget.new
   end
 
   # GET /widgets/1 or /widgets/1.json
