@@ -26,7 +26,7 @@ class WidgetsController < ApplicationController
 
     respond_to do |format|
       if @widget.save
-        format.html { redirect_to widget_url(@widget), notice: "Widget was successfully created." }
+        format.html { redirect_to widgets_url, notice: "Widget was successfully created." }
         format.json { render :show, status: :created, location: @widget }
       else
         format.html { render :new, status: :unprocessable_entity }

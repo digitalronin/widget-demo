@@ -2,6 +2,10 @@
 
 <h1>Widgets</h1>
 
+<%= turbo_stream_from "widgets" %>
+
 <%= render "widgets/form", widget: @widget %>
 
-<%= render @widgets %>
+<%= turbo_frame_tag "widgets" do %>
+  <%= render @widgets %>
+<% end %>
